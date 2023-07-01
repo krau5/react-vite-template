@@ -14,8 +14,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
     "baseUrl": "./src",
-    "types": ["vite/client", "node"]
+    "types": ["vite/client", "node"],
   },
   "include": ["src"]
 }
