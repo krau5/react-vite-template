@@ -4,3 +4,6 @@
 
 # Dependencies
 node_modules/
+
+# Miscellaneous
+.DS_STORE
