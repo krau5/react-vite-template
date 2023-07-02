@@ -5,6 +5,9 @@ import { styles } from './UIProvider.styles';
 
 const staticTheme: Omit<Theme, 'sizing'> = {
   color: {
+    primary: '#0088cc',
+    primaryLight: '#0197e2',
+    primaryDark: '#0082c2',
     black: '#000000',
     white: '#ffffff',
   },
