@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders a component 1`] = `
+<DocumentFragment>
+  <button
+    class="css-u9thn7-button"
+    type="button"
+  >
+    Caption
+  </button>
+</DocumentFragment>
+`;
