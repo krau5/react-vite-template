@@ -1,4 +1,9 @@
-export type ThemeColorName = 'black' | 'white';
+export type ThemeColorName =
+  | 'primary'
+  | 'primaryLight'
+  | 'primaryDark'
+  | 'black'
+  | 'white';
 
 export type Theme = {
   color: Record<ThemeColorName, string>;

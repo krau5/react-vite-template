@@ -3,6 +3,8 @@ import { decrementCount, incrementCount, selectCount } from 'store/counter';
 import { useAppDispatch, useAppSelector } from 'store';
 import { UIProvider } from 'components/UIProvider';
 import { Box } from 'components/Box';
+import { Button } from 'components/Button';
+import { Typography } from 'components/Typography';
 
 export const App = () => {
   const dispatch = useAppDispatch();
@@ -23,11 +25,19 @@ export const App = () => {
 
   return (
     <UIProvider>
-      <p>Current count{count}</p>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+        mt={25}
+      >
+        <Typography>Current count {count}</Typography>
 
-      <Box display="flex" gap={2}>
-        <button onClick={handleClick('increment')}>Increment</button>
-        <button onClick={handleClick('decrement')}>Decrement</button>
+        <Box display="flex" gap={2} mt={4}>
+          <Button onClick={handleClick('increment')}>Increment</Button>
+          <Button onClick={handleClick('decrement')}>Decrement</Button>
+        </Box>
       </Box>
     </UIProvider>
   );
