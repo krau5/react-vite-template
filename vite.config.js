@@ -1,6 +1,6 @@
-import path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [
@@ -10,16 +10,8 @@ export default defineConfig({
         plugins: ['@emotion/babel-plugin'],
       },
     }),
+    tsconfigPaths(),
   ],
-  resolve: {
-    alias: {
-      app: path.resolve('src/app'),
-      components: path.resolve('src/components'),
-      store: path.resolve('src/store'),
-      testUtils: path.resolve('src/testUtils'),
-      types: path.resolve('src/types'),
-    },
-  },
   test: {
     globals: true,
     environment: 'jsdom',
