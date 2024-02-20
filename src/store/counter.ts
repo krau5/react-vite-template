@@ -34,5 +34,5 @@ const selectState = (state: RootState) => state.counter;
 
 export const selectCount = createSelector(
   selectState,
-  (state): number => state.count
+  (state): number => state.count,
 );

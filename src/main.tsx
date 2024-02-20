@@ -13,5 +13,5 @@ root.render(
     <UIProvider>
       <App />
     </UIProvider>
-  </Provider>
+  </Provider>,
 );

@@ -36,10 +36,9 @@ export const styles = {
       mb,
       ml,
     }: BoxProps) =>
-    (theme: Theme) =>
-      css`
-        ${display && `display: ${display};`}
-        ${alignItems && `align-items: ${alignItems};`}
+    (theme: Theme) => css`
+      ${display && `display: ${display};`}
+      ${alignItems && `align-items: ${alignItems};`}
         ${justifyContent && `justify-content: ${justifyContent};`}
         ${flexDirection && `flex-direction: ${flexDirection};`}
         ${flexWrap && `flex-wrap: ${flexWrap};`}
@@ -62,5 +61,5 @@ export const styles = {
         ${(m || mx || mr) && `margin-right: ${theme.sizing(m || mx || mr)};`}
         ${(m || my || mb) && `margin-bottom: ${theme.sizing(m || my || mb)};`}
         ${(m || mx || ml) && `margin-left: ${theme.sizing(m || mx || ml)};`}
-      `,
+    `,
 };

@@ -19,7 +19,7 @@ export const App = () => {
 
       dispatch(decrementCount());
     },
-    [dispatch]
+    [dispatch],
   );
 
   return (

@@ -1,9 +1,27 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a component 1`] = `
 <DocumentFragment>
-  <button
-    class="css-u9thn7-button"
+  .emotion-0 {
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #0088cc;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  background: #0197e2;
+}
+
+.emotion-0:active {
+  background: #0082c2;
+}
+
+<button
+    class="emotion-0"
     type="button"
   >
     Caption
