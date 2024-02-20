@@ -1,12 +1,11 @@
-import { expect, it, vi } from 'vitest';
 import { renderComponent, user } from 'testUtils';
 import { Button } from '.';
 
 it('renders a component', async () => {
-  const handleClick = vi.fn(() => {});
+  const handleClick = jest.fn(() => {});
 
   const { asFragment, findByText } = renderComponent(
-    <Button onClick={handleClick}>Caption</Button>
+    <Button onClick={handleClick}>Caption</Button>,
   );
 
   expect(asFragment()).toMatchSnapshot();
