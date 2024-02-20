@@ -8,10 +8,7 @@ const config: Config = {
   moduleNameMapper: {
     '\\.(css|ttf|ico|png|svg|jpg)$': require.resolve('./test/emptyModule.ts'),
   },
-  setupFilesAfterEnv: [
-    '@testing-library/jest-dom/jest-globals',
-    './test/setupTests.ts',
-  ],
+  setupFilesAfterEnv: ['@testing-library/jest-dom/jest-globals'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jsdom',
   testMatch: ['**/*.test.(tsx|ts)'],

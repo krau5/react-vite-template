@@ -30,16 +30,15 @@ const typographyStyle =
     lineHeight,
     color,
   }: TypographyStyleProps) =>
-  (theme: Theme) =>
-    css`
-      font-family: ${theme.font};
-      font-size: ${fontSize}px;
-      font-weight: ${fontWeight};
-      letter-spacing: ${letterSpacing}px;
-      line-height: ${lineHeight}px;
+  (theme: Theme) => css`
+    font-family: ${theme.font};
+    font-size: ${fontSize}px;
+    font-weight: ${fontWeight};
+    letter-spacing: ${letterSpacing}px;
+    line-height: ${lineHeight}px;
 
-      color: ${color ? theme.color[color] : theme.color.black};
-    `;
+    color: ${color ? theme.color[color] : theme.color.black};
+  `;
 
 export const typographyStyles: Record<
   TypographyVariant,
