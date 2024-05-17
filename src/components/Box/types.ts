@@ -1,3 +1,5 @@
+import { ThemeColorName } from 'types';
+
 type Common = 'normal' | 'stretch' | 'unset';
 
 type AlignItems =
@@ -7,6 +9,15 @@ type AlignItems =
   | 'flex-start'
   | 'flex-end'
   | 'baseline';
+
+type AlignSelf =
+  | 'center'
+  | 'start'
+  | 'end'
+  | 'self-start'
+  | 'self-end'
+  | 'flex-start'
+  | 'flex-end';
 
 type JustifyContent =
   | 'center'
@@ -41,10 +52,13 @@ type BoxSpacingProps = {
 type BoxContainerProps = {
   display?: 'flex' | 'block' | 'inline-flex' | 'inline-block';
   alignItems?: AlignItems | Common;
+  alignSelf?: AlignSelf | Common;
   justifyContent?: JustifyContent | Common;
   flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
   flexWrap?: 'wrap' | 'nowrap';
   gap?: string | number;
+  position?: 'fixed' | 'absolute' | 'sticky' | 'static' | 'relative';
+  background?: ThemeColorName;
 };
 
 type BoxRectProps = {
@@ -55,6 +69,19 @@ type BoxRectProps = {
 
   width?: string | number;
   height?: string | number;
+  maxWidth?: string | number;
+  maxHeight?: string | number;
+  minWidth?: string | number;
+  minHeight?: string | number;
+
+  aspectRatio?: string;
 };
 
-export type BoxProps = BoxSpacingProps & BoxContainerProps & BoxRectProps;
+type Miscellaneous = {
+  cursor?: 'pointer';
+};
+
+export type BoxProps = BoxSpacingProps &
+  BoxContainerProps &
+  BoxRectProps &
+  Miscellaneous;

@@ -2,64 +2,86 @@ import { css } from '@emotion/react';
 import { Theme } from 'types';
 import { BoxProps } from './types';
 
-export const styles = {
-  container:
-    ({
-      display,
-      alignItems,
-      justifyContent,
-      flexDirection,
-      flexWrap,
-      gap,
+export const useBox = ({
+  display,
+  alignItems,
+  alignSelf,
+  justifyContent,
+  flexDirection,
+  flexWrap,
+  gap,
 
-      top,
-      right,
-      bottom,
-      left,
+  top,
+  right,
+  bottom,
+  left,
 
-      width,
-      height,
+  width,
+  height,
+  maxWidth,
+  maxHeight,
+  minWidth,
+  minHeight,
+  aspectRatio,
+  position,
+  background,
 
-      p,
-      px,
-      py,
-      pt,
-      pr,
-      pb,
-      pl,
+  p,
+  px,
+  py,
+  pt,
+  pr,
+  pb,
+  pl,
 
-      m,
-      mx,
-      my,
-      mt,
-      mr,
-      mb,
-      ml,
-    }: BoxProps) =>
-    (theme: Theme) => css`
-      ${display && `display: ${display};`}
-      ${alignItems && `align-items: ${alignItems};`}
-        ${justifyContent && `justify-content: ${justifyContent};`}
-        ${flexDirection && `flex-direction: ${flexDirection};`}
-        ${flexWrap && `flex-wrap: ${flexWrap};`}
-        ${gap && `gap: ${theme.sizing(gap)};`}
+  m,
+  mx,
+  my,
+  mt,
+  mr,
+  mb,
+  ml,
+
+  cursor,
+
+  ...attributes
+}: BoxProps) => {
+  const boxStyle = (theme: Theme) => css`
+    ${display && `display: ${display};`}
+    ${alignItems && `align-items: ${alignItems};`}
+    ${alignSelf && `align-self: ${alignSelf};`}
+    ${justifyContent && `justify-content: ${justifyContent};`}
+    ${flexDirection && `flex-direction: ${flexDirection};`}
+    ${flexWrap && `flex-wrap: ${flexWrap};`}
+    ${gap && `gap: ${theme.sizing(gap)};`}
         
-        ${top && `top: ${theme.sizing(top)};`}
-        ${right && `right: ${theme.sizing(right)};`}
-        ${bottom && `bottom: ${theme.sizing(bottom)};`}
-        ${left && `left: ${theme.sizing(left)};`}
+    ${top && `top: ${theme.sizing(top)};`}
+    ${right && `right: ${theme.sizing(right)};`}
+    ${bottom && `bottom: ${theme.sizing(bottom)};`}
+    ${left && `left: ${theme.sizing(left)};`}
         
-        ${width && `left: ${theme.sizing(width)};`}
-        ${height && `left: ${theme.sizing(height)};`}
+    ${width && `width: ${theme.sizing(width)};`}
+    ${height && `height: ${theme.sizing(height)};`}
+    ${maxWidth && `max-width: ${theme.sizing(maxWidth)};`}
+    ${maxHeight && `max-height: ${theme.sizing(maxHeight)};`}
+    ${minWidth && `min-width: ${theme.sizing(minWidth)};`}
+    ${minHeight && `min-height: ${theme.sizing(minHeight)};`}
+    ${aspectRatio && `aspect-ratio: ${aspectRatio};`}
+    ${position && `position: ${position};`}
+    ${background && `background: ${theme.color[background]};`}
         
-        ${(p || py || pt) && `padding-top: ${theme.sizing(p || py || pt)};`}
-        ${(p || px || pr) && `padding-right: ${theme.sizing(p || px || pb)};`}
-        ${(p || py || pb) && `padding-bottom: ${theme.sizing(p || py || pb)};`}
-        ${(p || px || pl) && `padding-left: ${theme.sizing(p || pl || pb)};`}
+    ${(p || py || pt) && `padding-top: ${theme.sizing(p || py || pt)};`}
+    ${(p || px || pr) && `padding-right: ${theme.sizing(p || px || pr)};`}
+    ${(p || py || pb) && `padding-bottom: ${theme.sizing(p || py || pb)};`}
+    ${(p || px || pl) && `padding-left: ${theme.sizing(p || px || pl)};`}
         
-        ${(m || my || mt) && `margin-top: ${theme.sizing(m || my || mt)};`}
-        ${(m || mx || mr) && `margin-right: ${theme.sizing(m || mx || mr)};`}
-        ${(m || my || mb) && `margin-bottom: ${theme.sizing(m || my || mb)};`}
-        ${(m || mx || ml) && `margin-left: ${theme.sizing(m || mx || ml)};`}
-    `,
+    ${(m || my || mt) && `margin-top: ${theme.sizing(m || my || mt)};`}
+    ${(m || mx || mr) && `margin-right: ${theme.sizing(m || mx || mr)};`}
+    ${(m || my || mb) && `margin-bottom: ${theme.sizing(m || my || mb)};`}
+    ${(m || mx || ml) && `margin-left: ${theme.sizing(m || mx || ml)};`}
+    
+    ${cursor && `cursor: ${cursor};`}
+  `;
+
+  return { boxStyle, ...attributes };
 };
