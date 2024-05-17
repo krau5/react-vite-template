@@ -3,7 +3,7 @@
     "target": "esnext",
     "lib": ["DOM", "DOM.Iterable", "esnext"],
     "allowJs": false,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -22,5 +22,5 @@
     },
     "types": ["vite/client", "jest", "@testing-library/jest-dom", "node"]
   },
-  "include": ["src", "test", "jest.config.ts"]
+  "include": ["src", "test", "jest.config.ts", "vite.config.ts"]
 }

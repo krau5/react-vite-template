@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
-import { Theme } from 'types';
-import { BoxProps } from './types';
+import type { Theme } from 'types';
+import type { BoxProps } from './types';
 
 export const useBox = ({
   display,

@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { ThemeProvider, Global } from '@emotion/react';
-import { Theme } from 'types';
+import type { Theme } from 'types';
 import { styles } from './UIProvider.styles';
 
 const staticTheme: Omit<Theme, 'sizing'> = {

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import emotionNormalize from 'emotion-normalize';
-import { Theme } from 'types';
+import type { Theme } from 'types';
 import { font } from './Font.styles';
 
 export const styles = {

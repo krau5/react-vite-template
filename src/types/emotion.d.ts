@@ -1,6 +1,6 @@
 import '@emotion/react';
-import { Interpolation } from '@emotion/serialize';
-import { Theme as UITheme } from '.';
+import type { Interpolation } from '@emotion/serialize';
+import type { Theme as UITheme } from '.';
 
 declare module '@emotion/react' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface

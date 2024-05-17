@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 import { styles } from './Button.styles';
 
 export const Button = ({

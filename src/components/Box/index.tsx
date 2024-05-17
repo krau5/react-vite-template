@@ -1,5 +1,6 @@
-import { forwardRef, HTMLProps, PropsWithChildren } from 'react';
-import { BoxProps } from './types';
+import type { HTMLProps, PropsWithChildren } from 'react';
+import { forwardRef } from 'react';
+import type { BoxProps } from './types';
 import { useBox } from './Box.styles';
 
 export const Box = forwardRef<

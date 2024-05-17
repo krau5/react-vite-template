@@ -1,4 +1,4 @@
-import { ThemeColorName } from 'types';
+import type { ThemeColorName } from 'types';
 
 type Common = 'normal' | 'stretch' | 'unset';
 
