@@ -1,5 +1,5 @@
-import { JSX, PropsWithChildren } from 'react';
-import { TypographyProps, TypographyVariant } from './types';
+import type { JSX, PropsWithChildren } from 'react';
+import type { TypographyProps, TypographyVariant } from './types';
 import { typographyStyles } from './Typography.styles';
 
 const typographyTags: Record<TypographyVariant, keyof JSX.IntrinsicElements> = {

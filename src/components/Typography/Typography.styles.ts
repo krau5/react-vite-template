@@ -1,6 +1,7 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { TypographyVariant } from 'components/Typography/types';
-import { Theme, ThemeColorName } from 'types';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { TypographyVariant } from 'components/Typography/types';
+import type { Theme, ThemeColorName } from 'types';
 
 type Props = {
   fontSize: number;

@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Theme } from 'types';
+import type { Theme } from 'types';
 
 export const styles = {
   button: (theme: Theme) => css`

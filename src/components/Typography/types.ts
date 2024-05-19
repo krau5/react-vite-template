@@ -1,5 +1,5 @@
-import { JSX } from 'react';
-import { ThemeColorName } from 'types';
+import type { JSX } from 'react';
+import type { ThemeColorName } from 'types';
 
 /**
  * https://mui.com/material-ui/react-typography/#component

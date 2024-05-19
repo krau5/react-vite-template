@@ -1,5 +1,6 @@
-import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '.';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSelector, createSlice } from '@reduxjs/toolkit';
+import type { RootState } from '.';
 
 type State = {
   count: number;
