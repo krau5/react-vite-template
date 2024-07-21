@@ -23,7 +23,7 @@ const getTheme = (): Theme => {
     unit,
     sizing: (...sizes) => {
       return sizes.reduce<string>((accumulator, size) => {
-        if (size) {
+        if (size !== undefined) {
           return `${accumulator}${
             typeof size === 'string' ? size : `${size * unit}px`
           } `;
