@@ -10,6 +10,12 @@ Then clone it, install the dependencies, and you are ready to run the applicatio
 
 The app will be available at `http://localhost:3000/`
 
+### Features
+- Pre-configured with CSS-in-JS styling using Emotion.js
+- Pre-configured with code quality tools: ESLint, Prettier, TypeScript, Jest, etc.
+- File-based routing based on TanStack Router
+- CI based on GitHub Actions
+
 ### Scripts
 
 - `npm start` - launches the application
@@ -17,7 +23,6 @@ The app will be available at `http://localhost:3000/`
 - `npm run lint` - launches code quality validating using predefined ESLint configuration
 - `npm run check-types` - launches type checking process using TS compiler
 - `npm run prepare` - installs pre-commit hooks
-
 
 ### How to contribute
 
