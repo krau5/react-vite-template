@@ -12,7 +12,7 @@ export const Typography = ({
   component,
   variant = 'h3',
 }: PropsWithChildren<TypographyProps>) => {
-  const Component = typographyTags[variant] ?? component;
+  const Component = component ?? typographyTags[variant];
 
   return (
     <Component css={typographyStyles[variant](color)}>{children}</Component>
