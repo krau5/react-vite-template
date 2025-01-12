@@ -3,8 +3,7 @@ import type { Interpolation } from '@emotion/serialize';
 import type { Theme as UITheme } from '.';
 
 declare module '@emotion/react' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  export interface Theme extends UITheme {}
+  export type Theme = UITheme;
 }
 
 declare module '@emotion/core' {
